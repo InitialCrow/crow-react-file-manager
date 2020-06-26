@@ -1,0 +1,182 @@
+.file-manager-wrapper{
+
+	border: 1px solid #e0e0e0;
+	background: #fff;
+	height: 1000px;
+}
+
+.file-manager-nav{
+	height: 100%;
+	position: relative;
+    float: left;
+    width: 260px;
+    padding: 1rem;
+    border-right: 1px solid #e0e0e0;
+}
+.manager-nav-label{
+	font-size: .9rem;
+    font-weight: 400;
+    margin-left: 3px;
+    text-transform: uppercase;
+    color: #bdbdbd;
+}
+.file-manager-nav .btn-wrapp{
+	margin-bottom: 2rem!important;
+}
+
+.nav-d-inline{
+	display: inline;
+}
+
+.manager-nav-menu .chip{
+	font-weight: 200;
+	line-height: 22px;
+	height: 22px;
+	padding: 0 8px;
+	border-radius: 50%;
+	float: right;
+}
+.mr-3{
+	margin-right: 3%!important;
+
+}
+
+.file-manager-nav .btn {
+	color: inherit;
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    transition: inherit;
+    transform-origin: inherit;
+    text-align: inherit;
+    transform: inherit;
+}
+.file-manager-nav .btn {
+	cursor: pointer;
+	text-transform: none;
+	color: white;
+	text-align: center;
+	width: 100%;
+	font-size: 1rem;
+	letter-spacing: .5px;
+	background-color: #ff4081!important;
+}
+
+.file-manager-nav i {
+	font-size: 22px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.manager-nav-menu span {
+	font-weight: 300;
+	vertical-align: middle;
+}
+.manager-nav-menu .menu-item{
+	transition: 0.3s background;
+	width: 100%;
+	display: block;
+	padding: 10px 0;
+}
+
+.manager-nav-menu .menu-item:hover{
+	background-color: #f9f9f9;
+}
+.getfileInput{
+
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+
+.file-manager-content{
+	float: right;
+	width: calc(100% - 260px);
+	height: 100%;
+}
+
+.file-manager-header{
+	margin-bottom: 0;
+	padding-left: 2.5rem;
+	box-shadow: none;
+	border-bottom: 1px solid #e0e0e0;
+}
+.file-manager-header .input-field{
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+.file-manager-header .input-field i{
+	color: #6b6e81;
+}
+.file-manager-header .input-field input{
+	font-weight: 300;
+	border-bottom: none;
+	
+}
+
+
+.file-manager-content .content{
+	padding: 24px;
+
+}
+
+.file-manager-content .content .title{
+	font-size: 1.2rem;
+	margin: 8px 0 38px 0;
+}
+
+.file-manager-content .manager-file-label{
+	font-size: .9rem;
+    font-weight: 400;
+    margin-left: 3px;
+    text-transform: uppercase;
+    color: #bdbdbd;
+    margin-left: 3px;
+}
+
+.file-manager-content .card .card-content{
+	padding: .5rem;
+	color: #6b6f82;
+}
+.file-manager-content .file-info{
+	margin-top: .5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.file-manager-folder .file-folder-content{
+	align-items: center;
+	display:flex;
+
+}
+
+
+.file-manager-folder .file-folder-content .file-folder-size, .file-manager-file .file-size , .file-manager-file .file-type{
+	font-weight: 300;
+}
+.file-manager-content .fonticon{
+	position: absolute;
+    right: 5px;
+}
+.file-manager-content i {
+	font-size: 22px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.file-manager-content .file-content-logo{
+	overflow: hidden;
+	margin-bottom: .5rem;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.file-manager-content .recent-file{
+	display: block;
+	margin: 25px auto;
+}
+  
