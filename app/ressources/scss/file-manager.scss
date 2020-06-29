@@ -96,8 +96,15 @@
 	width: calc(100% - 260px);
 	height: 100%;
 }
-
+.align-items-center{
+	align-items: center;
+}
+.file-manager-header i{
+	font-size: 22px;
+	color: #6b6f82;
+}
 .file-manager-header{
+	display: flex;
 	margin-bottom: 0;
 	padding-left: 2.5rem;
 	box-shadow: none;
@@ -115,8 +122,16 @@
 	border-bottom: none;
 	
 }
-
-
+.file-header-icons{
+	display:flex;
+}
+.search-file-wrapp{
+	flex-grow: 1;
+}
+.fonticon-wrap{
+	margin-left:.7rem;
+	display: inline;
+}
 .file-manager-content .content{
 	padding: 24px;
 
@@ -139,6 +154,14 @@
 .file-manager-content .card .card-content{
 	padding: .5rem;
 	color: #6b6f82;
+}
+.file-manager-content .inner-logo{
+	width: 30px;
+	height: 38px;
+	font-size: 2rem;
+	display: block;
+    margin: 25px auto;
+    color: #6b6e81;
 }
 .file-manager-content .file-info{
 	margin-top: .5rem;
@@ -178,5 +201,6 @@
 .file-manager-content .recent-file{
 	display: block;
 	margin: 25px auto;
+	
 }
   

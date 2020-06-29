@@ -44,10 +44,17 @@ class FileManagerCont extends Component {
 		})
 		return render
 	}
+	changeFolder(folder){
+		let newCurrent = this.state.currentContent
+		let newData = folder.action()
+		newCurrent.folderList = newData.folderList
+		newCurrent.fileList = newData.fileList
+		this.setState({currentContent:newCurrent})
+	}
 	renderFolder(){
 		return this.state.currentContent.folderList.map((folder,i)=>{
 			return(
-				<div key={"__t"+i} className="col xl3 l6 m4 s6">
+				<div key={"__t"+i} className="col xl3 l6 m4 s6" onClick={()=>{this.changeFolder(folder)}}>
 					<div className="card file-info">
 						<div className="card-content">
 							<div className="file-folder-content">
@@ -72,6 +79,18 @@ class FileManagerCont extends Component {
 			)
 		})
 	}
+	renderFileLogoType(file){
+		if(file.logo){
+			return(
+				<img className="recent-file" src={file.logo} height="38" width="30" alt="Card image cap"/>
+			)
+		}
+		else if(file.classLogo){
+			return(
+				<div className={"inner-logo fi "+ file.classLogo }></div>
+			)
+		}
+	}
 	renderFile(){
 		return this.state.currentContent.fileList.map((file,i)=>{
 
@@ -86,7 +105,8 @@ class FileManagerCont extends Component {
 								<ul id={'dropdown'+i} className='dropdown-content'>
 								    {this.renderDropdown(i)}
 								</ul>
-								<img className="recent-file" src={file.logo} height="38" width="30" alt="Card image cap"/>
+								{this.renderFileLogoType(file)}
+								
 							</div>
 							<div className="file-details">
 								<div className="file-name">{file.name}</div>
@@ -118,6 +138,18 @@ class FileManagerCont extends Component {
 	        </div>
 		)
 	}
+	renderMoreTool(){
+		if(this.props.data.moreToolMenu ){
+
+			return this.props.data.moreToolMenu.map((item,i)=>{
+				return(
+					<div key={"t__"+i} className="fonticon-wrap ">
+						<i className="material-icons" onClick={item.action}>{item.logo}</i>
+					</div>	
+				)
+			})
+		}
+	}
 	render(){
 		return(
 			<div className="col s12">
@@ -142,13 +174,18 @@ class FileManagerCont extends Component {
 					<div className="file-manager-content">
 						
 						<div className="file-manager-header">
+					      	<div className="search-file-wrapp">
+					      		
+								<div className="input-field">
+									<i className="material-icons prefix">search</i>
+									<input type="search" id="search-file" placeholder="search-file"/>
+								</div>
+					      	</div>
 					      
-							<div className="input-field">
-								<i className="material-icons prefix">search</i>
-								<input type="search" id="search-file" placeholder="search-file"/>
+							<div className="file-header-icons align-items-center">
+								
+								{this.renderMoreTool()}
 							</div>
-					      
-					        
 				        </div>
 				        {this.renderContent()}
 				
